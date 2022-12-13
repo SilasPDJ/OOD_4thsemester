@@ -4,22 +4,22 @@ import java.util.List;
 public class Cliente extends Pessoa {
     // class Pessoa não pode ser instanciada, pois é abstrata
     private  boolean vip;
-    List<Endereco> empList = new ArrayList<Endereco>();
+    List<Endereco> empList =  new ArrayList<Endereco>();;
+
     Cliente(String nome, String cpf, String telefone){
         this.setNome(nome);
         this.setCpf(cpf);
         this.setTelefone(telefone);
 
-        this.empList.add(criarEndereco("12345678"));
-        this.empList.add(criarEndereco("76543210"));
+        criarEndereco("12345678");
+        criarEndereco("76543210");
 
     }
 
     //public Endereco buscarPorCep(){
 
     //}
-    static Endereco criarEndereco(String cep){
-        // com static posso criar instância
+    public void criarEndereco(String cep){
         Endereco enderec = new Endereco();
         enderec.setCep(cep);
 //        enderec.setLogadouro("Rua Alfeu");
@@ -27,7 +27,7 @@ public class Cliente extends Pessoa {
 //        enderec.setComplemento("-");
 //        enderec.setCidade("SBC");
 //        enderec.setUf("SP");
-        return enderec;
+        this.empList.add(enderec);
     }
 
     public List<Endereco> listarEnderecos(){
@@ -48,4 +48,5 @@ public class Cliente extends Pessoa {
         }
         return this.empList;
     }
+
 }
