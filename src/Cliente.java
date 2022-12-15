@@ -2,38 +2,54 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
 
-public class Cliente extends Pessoa {
+public class Cliente extends Pessoa implements Usuario {
     // class Pessoa não pode ser instanciada, pois é abstrata
     private boolean vip;
     List<Endereco> enderecosList = new ArrayList<Endereco>();
-    ;
+    public List<ContaCorrente> contaCorrenteList = new ArrayList<ContaCorrente>();
+    public List<ContaPoupanca> contaPoupancaList = new ArrayList<ContaPoupanca>();
 
     Cliente(String nome, String cpf, String telefone) {
         this.setNome(nome);
         this.setCpf(cpf);
         this.setTelefone(telefone);
-
-        adicionarEndereco("12345678");
-        adicionarEndereco("76543210");
-
     }
 
-    //public Endereco buscarPorCep(){
+    public void gerarContaCorrente(String conta){
+        ContaCorrente novaConta = new ContaCorrente(conta);
+        this.contaCorrenteList.add(novaConta);
+//        System.out.println(contaCorrente1.calcularSaldo());
+    }
+    public void gerarContaPoupanca(String conta){
+        ContaPoupanca novaConta = new ContaPoupanca(conta);
+        this.contaPoupancaList.add(novaConta);
+//        System.out.println(contaCorrente1.calcularSaldo());
+    }
 
-    //}
-    public void adicionarEndereco(String cep) {
+    public void adicionarEndereco(String cep, String logradouro, String numero, String complemento, String cidade, String uf) {
         // change me later if you wish
         Endereco enderec = new Endereco();
         enderec.setCep(cep);
-        enderec.setLogadouro("Rua Lorem Ipsum");
-        enderec.setNumero("S/N");
-        // enderec.setComplemento("");
-        enderec.setCidade("SBC");
-        enderec.setUf("SP");
+        enderec.setLogadouro(logradouro);
+        enderec.setNumero(numero);
+         enderec.setComplemento(complemento);
+        enderec.setCidade(cidade);
+        enderec.setUf(uf);
+        this.enderecosList.add(enderec);
+    }
+    public void adicionarEndereco(String cep, String logradouro, String numero, String cidade, String uf) {
+        // change me later if you wish
+        Endereco enderec = new Endereco();
+        enderec.setCep(cep);
+        enderec.setLogadouro(logradouro);
+        enderec.setNumero(numero);
+        // enderec.setComplemento(complemento);
+        enderec.setCidade(cidade);
+        enderec.setUf(uf);
         this.enderecosList.add(enderec);
     }
 
-    public List<Endereco> listarEnderecos() {
+    public void listarEnderecos() {
 
         ListIterator<Endereco> e = this.enderecosList.listIterator();
 
@@ -49,7 +65,11 @@ public class Cliente extends Pessoa {
             System.out.printf("   %s - %s, %s", endec.getCidade(), endec.getUf(), endec.getCep());
             System.out.println();
         }
-        return this.enderecosList;
+
     }
 
+    @Override
+    public boolean autenticar() {
+        return true;
+    }
 }

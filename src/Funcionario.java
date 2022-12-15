@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
 
-public class Funcionario extends Pessoa{
+public class Funcionario extends Pessoa implements Usuario{
     private double salario;
     List<Cargo> cargosList = new ArrayList<Cargo>();
 
@@ -33,6 +33,11 @@ public class Funcionario extends Pessoa{
             System.out.println(cargo.getNome());
             cont++;
         }
+    }
+
+    @Override
+    public boolean autenticar() {
+        return true;
     }
 }
 
