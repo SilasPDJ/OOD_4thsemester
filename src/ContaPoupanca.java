@@ -35,9 +35,12 @@ public class ContaPoupanca extends Conta{
 
     @Override
     public void depositar(Double valor) {
-        System.out.println("Recebendo... DEPÓSITO P/ conta POUPANÇA ...");
-        System.out.printf("Saldo anterior: %.2f\n", this.calcularSaldo());
+        System.out.println("Recebendo... TRANSFERÊNCIA P/ conta POUPANÇA ...");
+        System.out.printf("Valor da transferência: %.2f\n", valor);
+        System.out.printf("Saldo anterior        : %.2f\n", this.calcularSaldo());
         super.depositar(valor);
-        System.out.printf("Saldo atual   : %.2f\n\n", this.calcularSaldo());
+
+        System.out.printf("Calculando rentabilidade de %.2f %% ao mês ... \n", this.getRentalidadeMensal() * 100);
+        System.out.printf("Saldo após 1 mês      : %.2f\n\n", this.calcularSaldo());
     }
 }

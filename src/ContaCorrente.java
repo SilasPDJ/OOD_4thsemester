@@ -18,6 +18,7 @@ public class ContaCorrente extends Conta{
     @Override
     public void depositar(Double valor) {
         System.out.println("Recebendo... DEPÓSITO Conta CORRENTE...");
+        System.out.printf("Valor         : %.2f\n", valor);
         System.out.printf("Saldo anterior: %.2f\n", this.calcularSaldo());
         super.depositar(valor);
         System.out.printf("Saldo atual   : %.2f\n\n", this.calcularSaldo());
@@ -29,7 +30,7 @@ public class ContaCorrente extends Conta{
         Double saldo = this.calcularSaldo();
         System.out.printf("Saldo anterior: %.2f\n", this.calcularSaldo());
         super.sacar(valor);
-        System.out.printf("Saldo atual   : %.2f\n", this.calcularSaldo());
+        System.out.printf("Saldo atual   : %.2f\n\n", this.calcularSaldo());
     }
 
     public Double calcularSaldo(){
@@ -58,8 +59,8 @@ public class ContaCorrente extends Conta{
     }
 
     public void transferir(Conta contaDestino, Double valor){
-        System.out.printf("------ TRANSFERÊNCIA DE: %s\n", this.getNumero());
-        System.out.printf("------------ PARA CONTA: %s\n", contaDestino.getNumero());
+        System.out.printf("------------ DE  : %s\n", this.getNumero());
+        System.out.printf("------------ PARA: %s\n", contaDestino.getNumero());
         System.out.printf("             Enviando o valor de %.2f\n\n", valor);
         contaDestino.depositar(valor);
     }

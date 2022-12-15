@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b73fe5c-eaa4-4c7d-bd6d-cad2ef1875ba" name="Changes" comment="Funcionario.java; Cargo.java implementations">
-      <change afterPath="$PROJECT_DIR$/src/Conta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ContaCorrente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ContaPoupanca.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Credito.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Debito.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Usuario.java" afterDir="false" />
+    <list default="true" id="9b73fe5c-eaa4-4c7d-bd6d-cad2ef1875ba" name="Changes" comment="final_version_01">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Funcionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Funcionario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ContaCorrente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContaCorrente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ContaPoupanca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContaPoupanca.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +55,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="TrabalhFinalOOD" />
       <method v="2">
@@ -122,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670992251607</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="final_version_01">
+      <created>1671068875438</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671068875438</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,6 +140,7 @@
     <MESSAGE value="cliente_enderecosCanBeCreated" />
     <MESSAGE value="Cliente__instances" />
     <MESSAGE value="Funcionario.java; Cargo.java implementations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Funcionario.java; Cargo.java implementations" />
+    <MESSAGE value="final_version_01" />
+    <option name="LAST_COMMIT_MESSAGE" value="final_version_01" />
   </component>
 </project>
